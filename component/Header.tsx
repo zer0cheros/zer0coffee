@@ -22,7 +22,7 @@ const Header:React.FC = () => {
             {!session? <button className={style.signin} onClick={()=>{}}><Link href="/api/auth/signin"><a className="bold" data-active={isActive("/signup")}>Sign In</a></Link></button> :
              <div className={style.signendin}><button className={style.logout} onClick={()=>{signOut()}}>Log Out</button> <div className={style.user}><h3>{session.user?.name}</h3><img src={session.user?.image} alt="" /></div></div>}
             </div>
-        </div>
+        </div> 
         <div className={style.down}></div>
     </div>
   )
