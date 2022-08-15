@@ -1,0 +1,112 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background: url('https://wallpaperaccess.com/full/1889540.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0;
+    background-position-x: 0;
+    background-size: cover;
+}
+.nav_btn {
+    display: flex;
+    justify-content: right;
+    height: 80%;
+}
+.signin {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+.signin:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+.signin:active {
+	position:relative;
+	top:1px;
+}
+
+.header{
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    width: 100%;
+    height: 30%;
+    padding: 0.4rem 2rem;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.down {
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+.signendin{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-items: center;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+.signendin h3{
+    color: #ffff;
+    padding: 0 0.5rem;
+    font-size: larger;
+    margin: auto;
+}
+.signendin img{
+    max-height: 40%;
+    max-width: 40%;
+    border-radius: 50%;
+}
+.signendin button {
+    margin: 0rem 0.5rem;
+    box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52; 
+}
+.signendin button:hover{
+    background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	background-color:#fb9e25;
+}
+.signendin button:active {
+	position:relative;
+	top:1px;
+}
+.user {
+    display: flex;
+    max-width: 180px;
+    max-height: 60px;
+    
+}
