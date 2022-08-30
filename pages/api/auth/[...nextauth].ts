@@ -1,13 +1,21 @@
 import { NextApiHandler } from "next";
 import NextAuth from "next-auth";
+import type { NextAuthOptions } from "next-auth";
 import GitHubProvider from 'next-auth/providers/github'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import GoogleProvider from 'next-auth/providers/google'
 import prisma from '../../../lib/prisma'
+import { Session } from "@prisma/client";
 
+interface Options {
+  clientId: string
+  clientSecret: string
+  user: string
+}
 
-const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, options);
+const authHandler: NextApiHandler<Options> = (req, res) => NextAuth(req, res, options);
 export default authHandler;
+
 
 const options = {
   providers: [
@@ -22,4 +30,11 @@ const options = {
   ],
   adapter: PrismaAdapter(prisma),
   secret: process.env.SECRET,
+  callbacks: {
+    session: async (session:Session) => {
+      session.userId = session.user.id;
+          
+      return Promise.resolve(session);
+    }
+  }
 };

@@ -37,6 +37,14 @@ model Session {
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+model Coffee {
+  id        Int    @id @default(autoincrement())
+  title     String
+  content   String
+  userId    String?
+  published Boolean @default(false)
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
 
 model User {
   id            String    @id @default(cuid())
@@ -46,6 +54,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  coffees       Coffee[]
 }
 
 model VerificationToken {
@@ -55,3 +64,5 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+
